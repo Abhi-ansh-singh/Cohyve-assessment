@@ -18,7 +18,7 @@ const FirstPage = (props) => {
       <div className="relative z-10 flex flex-col justify-center items-center h-full  text-center">
         <Navbar />
         {props.children}
-        {/* <Comet/> */}
+
         <Footer />
       </div>
     </div>

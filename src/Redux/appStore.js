@@ -3,7 +3,7 @@ import darkModeManager from "./managers/darkModeManager";
 
 const appStore = configureStore({
   reducer: {
-    theme: darkModeManager,
+    theme: darkModeManager, 
   },
 });
 

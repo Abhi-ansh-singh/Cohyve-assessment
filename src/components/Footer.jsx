@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import darkModeReducer, { changeTheme, selectDarkMode } from "../Redux/managers/darkModeManager";
+import { changeTheme, selectDarkMode } from "../Redux/managers/darkModeManager";
 
 const Footer = () => {
-  const isDarkMode = useSelector(selectDarkMode);
+  const isDarkMode = useSelector(selectDarkMode);  // Correctly accessing the dark mode state
   const dispatch = useDispatch();
 
   return (
@@ -13,7 +13,7 @@ const Footer = () => {
           className={`cursor-pointer ${
             isDarkMode ? "text-[#fff5d9] opacity-100" : "text-[#fff5d9] opacity-50"
           }`}
-          onClick={() => dispatch(changeTheme(true))}
+          onClick={() => dispatch(changeTheme(true))}  // Dispatching action to enable dark mode
         >
           Dark
         </p>
@@ -21,7 +21,7 @@ const Footer = () => {
           className={`cursor-pointer ${
             isDarkMode ? "text-[#fff5d9] opacity-50" : "text-[#fff5d9] opacity-100"
           }`}
-          onClick={() => dispatch(changeTheme(false))}
+          onClick={() => dispatch(changeTheme(false))}  // Dispatching action to disable dark mode
         >
           Light
         </p>
